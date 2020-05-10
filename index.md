@@ -8,7 +8,7 @@ title: ""
 
 <picture>
   <source srcset="/assets/img/guide_scroll_290.webp" type="image/webp">
-  <img src="/assets/img/guide_scroll_novideo.png">
+  <img src="/assets/img/guide_scroll_novideo.png" alt="An image of the program guide on a CRT television.">
 </picture>
 
 This is a resource for creating your own personal little cable company.
