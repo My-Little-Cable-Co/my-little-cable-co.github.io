@@ -64,6 +64,11 @@ nav a:last-child {
   font-size: x-large;
 }
 
+.container picture {
+  display: flex;
+  justify-content: center;
+}
+
 .scenario {
   background-color: #ffd;
   border-radius: 5px;

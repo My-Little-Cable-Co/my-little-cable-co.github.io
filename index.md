@@ -6,6 +6,11 @@ title: ""
 ## What is this?
 {: #what}
 
+<picture>
+  <source srcset="/assets/img/guide_scroll_290.webp" type="image/webp">
+  <img src="/assets/img/guide_scroll_novideo.png">
+</picture>
+
 This is a resource for creating your own personal little cable company.
 Personally, I'm aiming for a 12 channel system, including a program guide
 channel, a weather channel, and more. Check out my system status
