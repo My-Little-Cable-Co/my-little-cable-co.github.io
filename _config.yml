@@ -18,6 +18,13 @@ description: Resources for creating your own private cable TV service.
 baseurl: ""
 url: "https://mylittlecable.co"
 
+# front matter defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/logo-500.png
+
 # Build settings
 markdown: kramdown
 
