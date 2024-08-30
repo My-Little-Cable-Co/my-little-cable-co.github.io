@@ -24,68 +24,42 @@ For fun, mostly. Play with some new-to-you technology and create your own channe
 ## How do you do it?
 {: #how}
 
-Like many hobbies, there are varying degrees of how "into it" you get. It all depends on how much time and money you are willing to put into it, and where you begin to start seeing diminishing returns. We'll outline several different setups along with the equipment and costs involved. Any of these approaches are valid if they fit your money/effort budget.
+Like many hobbies, there are varying degrees of how "into it" you get. It has
+definitely taken me a lot more time, money, and effort than I initially
+thought. I have a small server rack containing a 24 port PoE networking
+switch, a shelf that holds one set of (Raspberry Pi 3b+, PoE Hat) per channel,
+a Blonder Tongue MIRC-12 2U mini-modulator rack w/ power supply containing 12
+MICM-b modulators, and a Blonder Tongue OC-12 output combiner.
 
-### Big Picture Objective, Regardless of Project Scale
+The whole thing pretty much flows in rack order, top to bottom. My Synology
+NAS lives elsewhere on my network and holds all of the TV Shows, Movies, and
+Commercials that play on my cable system. The switch provides data and power
+to the Raspberry Pis, which output composite video to the modulators. The
+modulators have their signals packaged together in the output combiner, which
+provides the final signal viewable on the TVs throughout my house.
 
-Whether you have a single channel displayed on a computer or dozens of channels available to TVs throughout your house, your core objective is simple: **have one or more video feeds of scheduled content delivered to a display.**
+One of the Raspberry Pis runs the [Scheduler](https://github.com/My-Little-Cable-Co/Scheduler)
+application. That same Raspberry Pi is responsible for outputting the video
+feed of the program guide. Each other Raspberry Pi runs the 
+[Technical Director](https://github.com/My-Little-Cable-Co/Technical-Director) 
+program, which consults the scheduler and queues up the videos, interspersing
+commercials as needed.
 
-<div class="scenario" markdown="block">
-### Scenario 1: Simple
+The combination of those two programs gets you a simulation of a TV channel,
+and several of those starts to look like a cable system. By coming up with
+coherent schedules for a given channel's persona, you can create a fairly
+realistic experience.
 
-**Objective:**
-Schedule Video Files to Play at Specific Times
+Not all channels have to show videos, either! For example, the brilliant
+[WS4000 Simulator](https://www.taiganet.com/) gives you a very realistic
+weather channel with current forecasts and weather data for your area. You can
+tell the Scheduler that the weather channel is a 24 hour listing (like the
+guide channel), and feed the output of WS4000 to that channel's modulator.
+Another example might be a music video channel, where instead of showing
+episodes of a show, each timeslot represents a theme or genre. This channel
+would have a similar, but better suited for the context Technical
+Director-style program controlling the video feed.
 
-**Suggested Equipment:**
-* A computer
-* Video files
-
-**Suggested Budget, assuming you have a computer:**
-$0.00
-
-Instructions coming soon!
-{: .center }
-</div>
-
-<div class="scenario" markdown="block">
-### Scenario 2: Advanced
-
-**Objective:**
-Have multiple channels to flip between on a real TV, including a guide channel.
-
-**Suggested Equipment:**
-* A multi-input RF modulator
-* A TV capable of tuning analog signals
-* One Raspberry Pi capable of outputting composite video for each input on the RF modulator
-* Video files
-
-**Suggested Budget:**
-$200-300
-
-Instructions coming soon!
-{: .center }
-</div>
-
-<div class="scenario" markdown="block">
-### Scenario 3: Enthusiast
-
-**Objective:**
-Have an expandable system with many channels, received by multiple TVs throughout your living space.
-
-**Suggested Equipment:**
-* One channelized or agile modulator per desired channel
-* Enough signal combiners to merge the channel signals into one
-* A distribution amplifier
-* One Raspberry Pi capable of outputting composite video for each modulator
-* A network attached storage device
-* A rack mount network switch
-* An equipment rack to hold all of this
-* Multiple TVs capable of tuning analog signals
-* Video files
-
-**Suggested Budget:**
-$500 - ¯\\\_(ツ)\_/¯
-
-Instructions coming soon!
-{: .center }
-</div>
+Something I'd like to do in the future is have the Scheduler be able to
+"follow" a real channel's listings, and use my HD Homerun to add OTA channels
+that show classic content. I look forward to seeing what others build.
