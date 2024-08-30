@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-To report a technical problem with the site, [click
+To report a technical problem with this site, [click
 here.](https://github.com/My-Little-Cable-Co/my-little-cable-co.github.io/issues/new?assignees=aduane&labels=bug&template=bug_report.md&title=)\\
 To report inaccurate information, [click
 here.](https://github.com/My-Little-Cable-Co/my-little-cable-co.github.io/issues/new?assignees=aduane&labels=documentation&template=factual-inaccuracy.md&title=)\\
